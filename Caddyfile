@@ -1,0 +1,10 @@
+http://0.0.0.0:8080
+{
+	root /app/wwwroot
+	index index.html
+	timeouts none
+	proxy /ws 127.0.0.1:9090 {
+		websocket
+		header_upstream -Origin
+	}
+}
